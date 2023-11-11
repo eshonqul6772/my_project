@@ -1,0 +1,131 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  vertical-align: baseline;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  position: relative;
+  background: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  position: fixed;
+  background: #DDE9F8;
+  background-size: 100vw 150vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+@media (min-width: 1024px) {
+  body::before {
+    background-attachment: fixed;
+  }
+}
+
+main{
+  margin-top: 100px;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border: 0;
+  outline: none;
+}
+
+form {
+  width: 100%;
+}
+
+input,
+textarea,
+select {
+  outline: none;
+}
+
+img {
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+section .container {
+  background: white;
+  padding: 30px;
+}
+
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #4ceb95;
+  margin: 4px 10px;
+}
+
+.section-title p {
+  margin: -15px 0 15px 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  border: 1px solid #040404;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #040404;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #040404;
+}
+

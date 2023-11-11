@@ -1,0 +1,32 @@
+@mixin theme-light {
+  --background-black: #161A1D;
+  --background-blue: #0386FFFF;
+  --background-white: #FFFFFF;
+
+  // Text colors
+  --content-white: #FFFFFF;
+  --content-green: #4ceb95;
+  --content-black: #000000;
+  --content-primary: #0a2d56;
+
+
+  // Border colors
+  --border-black: #161A1D;
+  --border-white: #FFFFFF;
+  --border-red: #F03A45;
+  --border-green: #248277;
+  --border-grey: #333333;
+  --border-secondary: #8787A1;
+  --border-muted: #ACACAC;
+
+  // Border radius
+  --radius-5: 5px;
+  --radius-10: 10px;
+  --radius-20: 20px;
+
+  // Shadow colors
+  --shadow-xs: 0px 4px 38px rgba(0, 0, 0, 0.07);
+  --shadow-sm: 0 8px 17px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 17px rgba(0, 0, 0, 0.11);
+  --shadow-lg: 0 58px 44px rgba(0, 0, 0, 0.09);
+}
