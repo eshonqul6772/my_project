@@ -1,10 +1,12 @@
 import React from 'react';
 
+import * as Grid from 'components/Grid';
+
 import Card from './components/Card';
 
 import './Portfolio.scss';
 
-const Portfolio:React.FC = () => {
+const Portfolio: React.FC = () => {
   const arr = [0, 1, 2, 4, 5, 6, 7, 8, 9];
 
   return (
@@ -26,11 +28,19 @@ const Portfolio:React.FC = () => {
           </div>
         </div>
 
-        <div className='row portfolio-container'>
+        <Grid.Row gutter={[24, 24]}>
           {arr.map(index => (
-            <Card  imgUrl={'hello'} key={index} link={'hello'} linkData={'hello'} paragraph={'hello'} title={'hello'}/>
+            <Grid.Col key={index} xs={8}>
+              <Card
+                imgUrl={'hello'}
+                link={'hello'}
+                linkData={'hello'}
+                paragraph={'hello'}
+                title={'hello'}
+              />
+            </Grid.Col>
           ))}
-        </div>
+        </Grid.Row>
       </div>
     </section>
   );

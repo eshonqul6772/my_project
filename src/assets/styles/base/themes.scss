@@ -1,13 +1,19 @@
 @mixin theme-light {
   --background-black: #161A1D;
-  --background-blue: #0386FFFF;
+  --background-blue: blue;
+  --background-primary: #0a2d56;
   --background-white: #FFFFFF;
+  --background-green: #4ceb95;
+  --background-red: #F03A45;
+  --background-orange: #cc5603;
 
   // Text colors
+  --content-blue: #0386FFFF;
   --content-white: #FFFFFF;
   --content-green: #4ceb95;
   --content-black: #000000;
   --content-primary: #0a2d56;
+  --content-red: #F03A45;
 
 
   // Border colors

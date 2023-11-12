@@ -12,7 +12,7 @@ interface ICard {
 
 const Card: React.FC<ICard> = ({ imgUrl, title, paragraph, link, linkData }) => {
   return (
-    <div className='col-lg-4 col-md-6 portfolio-item filter-web'>
+    <div className=' portfolio-item filter-web'>
       <div className='portfolio-wrap'>
         <img
           src='https://upload.wikimedia.org/wikipedia/commons/4/49/A_black_image.jpg'

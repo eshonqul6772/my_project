@@ -6,7 +6,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.6);
+    background: var(--background-primary);
 
     .portfolio-info{
       opacity: 0;
@@ -42,7 +42,7 @@
 
     &::before {
       content: "";
-      background: rgba(0, 0, 0, 0.6);
+      background: var(--background-primary);
       position: absolute;
       left: 30px;
       right: 30px;

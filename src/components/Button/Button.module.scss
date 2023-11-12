@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 12px;
-  border-radius: var(--border-radius-4);
+  padding: 2px 16px;
+  border-radius: var(--radius-5);
   cursor: pointer;
   user-select: none;
   will-change: transform;
@@ -32,6 +32,8 @@
 
     &-blue {
       background-color: var(--background-blue);
+      color: var(--content-white);
+      padding: 2px 25px;
     }
 
     &-green {

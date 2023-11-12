@@ -7,7 +7,7 @@
   width: 100%;
   position: relative;
   text-align: center;
-  background: #bebec9;
+  background: var(--background-primary);
 }
 
 .counts .count-box i {
@@ -16,9 +16,9 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 24px;
-  background: #acacb6;
+  background: var(--background-blue);
   padding: 12px;
-  color: #18d26e;
+  color: var(--content-white);
   border-radius: 50px;
   line-height: 0;
 }
@@ -35,5 +35,5 @@
   margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
-  color: black;
+  color: var(--content-white);
 }

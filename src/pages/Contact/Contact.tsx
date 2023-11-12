@@ -1,6 +1,7 @@
 import React from 'react';
 
 import * as Icons from 'assets/Icons';
+import Button from 'components/Button';
 
 import './Contact.scss';
 
@@ -123,13 +124,8 @@ const Contact: React.FC = () => {
               required
             ></textarea>
           </div>
-          <div className='my-3'>
-            <div className='loading'>Loading</div>
-            <div className='error-message'></div>
-            <div className='sent-message'>Your message has been sent. Thank you!</div>
-          </div>
-          <div className='text-center'>
-            <button type='submit'>Send Message</button>
+          <div className='text-center d-flex justify-content-center'>
+            <Button htmlType='submit' title='submit' variant='blue' />
           </div>
         </form>
       </div>

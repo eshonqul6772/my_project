@@ -54,7 +54,7 @@ const AboutMe: React.FC = () => {
                 </li>
                 <li>
                   <i className='bi bi-chevron-right'></i> <strong>PhEmailone:</strong>
-                  <span>abdulazizoveshonqul66@gmail.con</span>
+                  <span>aeshonqul@gmail.con</span>
                 </li>
                 <li>
                   <i className='bi bi-chevron-right'></i> <strong>Freelance:</strong>{' '}

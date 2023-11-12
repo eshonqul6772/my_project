@@ -1,5 +1,7 @@
 import React from 'react';
 
+import * as Grid from 'components/Grid';
+
 import './Resume.scss';
 
 const Resume: React.FC = () => {
@@ -11,8 +13,8 @@ const Resume: React.FC = () => {
           <p>Check My Resume</p>
         </div>
 
-        <div className='row'>
-          <div className='col-lg-6'>
+        <Grid.Row gutter={[24, 24]}>
+          <Grid.Col xs={12}>
             <h3 className='resume-title'>Sumary</h3>
             <div className='resume-item pb-0'>
               <h4 className='text-dark'>Alice Barkley</h4>
@@ -56,8 +58,9 @@ const Resume: React.FC = () => {
                 molestiae consequatur neque etlon sader mart dila
               </p>
             </div>
-          </div>
-          <div className='col-lg-6'>
+          </Grid.Col>
+
+          <Grid.Col xs={12}>
             <h3 className='resume-title'>Professional Experience</h3>
             <div className='resume-item'>
               <h4>Senior graphic design specialist</h4>
@@ -109,8 +112,8 @@ const Resume: React.FC = () => {
                 </ul>
               </p>
             </div>
-          </div>
-        </div>
+          </Grid.Col>
+        </Grid.Row>
       </div>
     </section>
   );
