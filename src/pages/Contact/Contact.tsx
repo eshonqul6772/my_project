@@ -1,5 +1,7 @@
 import React from 'react';
 
+import * as Icons from 'assets/Icons';
+
 import './Contact.scss';
 
 const Contact: React.FC = () => {
@@ -7,23 +9,23 @@ const Contact: React.FC = () => {
     <section id='contact' className='contact'>
       <div className='container'>
         <div className='section-title'>
-          <h2>Contact</h2>
-          <p>Contact Me</p>
+          <h2 className='te xt-dark'>Contact</h2>
+          <p className='text-dark'>Contact Me</p>
         </div>
 
         <div className='row mt-2'>
           <div className='col-md-6 d-flex align-items-stretch'>
             <div className='info-box'>
-              <i className='fas fa-location-dot'></i>
-              <h3>My Address</h3>
-              <p>Tahkent Uzbekistan</p>
+              <Icons.Location />
+              <h3 className='text-dark'>My Address</h3>
+              <p className='text-dark'>Tahkent Uzbekistan</p>
             </div>
           </div>
 
           <div className='col-md-6 mt-4 mt-md-0 d-flex align-items-stretch'>
             <div className='info-box'>
-              <i className='fas fa-share-nodes'></i>
-              <h3>Social Profiles</h3>
+              <Icons.Share />
+              <h3 className='text-dark'>Social Profiles</h3>
               <div className='social-links'>
                 <a
                   href='https://www.twitter.com/eshonqul74'
@@ -67,15 +69,15 @@ const Contact: React.FC = () => {
           <div className='col-md-6 mt-4 d-flex align-items-stretch'>
             <div className='info-box'>
               <i className='fas fa-envelope'></i>
-              <h3>Email Me</h3>
-              <p>abdulazizoveshonqul66@gmail.com</p>
+              <h3 className='text-dark'>Email Me</h3>
+              <p className='text-dark'>abdulazizoveshonqul66@gmail.com</p>
             </div>
           </div>
           <div className='col-md-6 mt-4 d-flex align-items-stretch'>
             <div className='info-box'>
               <i className='fas fa-phone'></i>
-              <h3>Call Me</h3>
-              <p>+998 97 167 47 48</p>
+              <h3 className='text-dark'>Call Me</h3>
+              <p className='text-dark'>+998 97 167 47 48</p>
             </div>
           </div>
         </div>

@@ -11,3 +11,4 @@ export { default as Disk } from './Disk';
 export { default as Station } from './Station';
 export { default as FingerPrint } from './Fingerprint';
 export { default as Location } from './Location';
+export { default as Share } from './Share';

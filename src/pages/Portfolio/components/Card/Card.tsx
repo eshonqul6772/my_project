@@ -2,16 +2,15 @@ import React from 'react';
 
 import './Card.scss';
 
-interface ICard{
+interface ICard {
   imgUrl: string;
   title: string;
   paragraph: string;
   link: string;
   linkData: string;
-  key: number;
 }
 
-const Card:React.FC<ICard> = ({ imgUrl, title, paragraph, link, linkData, key }) => {
+const Card: React.FC<ICard> = ({ imgUrl, title, paragraph, link, linkData }) => {
   return (
     <div className='col-lg-4 col-md-6 portfolio-item filter-web'>
       <div className='portfolio-wrap'>
