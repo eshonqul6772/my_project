@@ -1,11 +1,76 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import axios from 'axios';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 
 import * as Icons from 'assets/Icons';
-import Button from 'components/Button';
+import * as Grid from 'components/Grid';
 
-import './Contact.scss';
+import Button from 'components/Button';
+import Input from 'components/Input';
+import Textarea from 'components/Textarea';
+
+import cls from './Contact.module.scss';
+
+interface IForm {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
 const Contact: React.FC = () => {
+  const schema = Yup.object().shape({
+    name: Yup.string().min(3).required(),
+    email: Yup.string().min(3).required(),
+    message: Yup.string().min(3).required(),
+    subject: Yup.string().min(3).required(),
+  });
+
+  const handleOnSubmit = async (values?: any) => {
+    const data = {
+      name: values.name,
+      email: values.email,
+      message: values.message,
+      subject: values.subject,
+    };
+
+    try {
+      const apiKey = '6287647192:AAGKvdStksMJ0Phs28z9dXXtWbD9C8kt7Ds';
+      const chatId = '2007014336';
+      const apiUrl = `https://api.telegram.org/bot${apiKey}/sendMessage`;
+
+      await axios.post(apiUrl, {
+        chat_id: chatId,
+        text: data,
+      });
+
+      console.log('Message sent successfully!');
+    } catch (error) {
+      console.error('Error sending message:', error);
+    }
+  };
+
+  const formik = useFormik<IForm>({
+    initialValues: {
+      name: '',
+      email: '',
+      message: '',
+      subject: '',
+    },
+    validationSchema: schema,
+    onSubmit: handleOnSubmit,
+  });
+
+  const setInputValue = useCallback(
+    (key: string, value: any) =>
+      formik.setValues({
+        ...formik.values,
+        [key]: value,
+      }),
+    [formik],
+  );
+
   return (
     <section id='contact' className='contact'>
       <div className='container'>
@@ -14,120 +79,135 @@ const Contact: React.FC = () => {
           <p className='text-dark'>Contact Me</p>
         </div>
 
-        <div className='row mt-2'>
-          <div className='col-md-6 d-flex align-items-stretch'>
-            <div className='info-box'>
-              <Icons.Location />
-              <h3 className='text-dark'>My Address</h3>
-              <p className='text-dark'>Tahkent Uzbekistan</p>
-            </div>
-          </div>
-
-          <div className='col-md-6 mt-4 mt-md-0 d-flex align-items-stretch'>
-            <div className='info-box'>
-              <Icons.Share />
-              <h3 className='text-dark'>Social Profiles</h3>
-              <div className='social-links'>
-                <a
-                  href='https://www.twitter.com/eshonqul74'
-                  target='_blank'
-                  className='twitter'
-                  rel='noreferrer'
-                >
-                  <i className='bi bi-twitter'></i>
-                </a>
-                <a
-                  href='https://www.facebook.com/Eshonqul'
-                  target='_blank'
-                  className='facebook'
-                  rel='noreferrer'
-                >
-                  <i className='bi bi-facebook'></i>
-                </a>
-                <a
-                  href='https://www.instagram.com/maxmadalivich_'
-                  target='_blank'
-                  className='instagram'
-                  rel='noreferrer'
-                >
-                  <i className='bi bi-instagram'></i>
-                </a>
-                <a
-                  href='https://www.linkedin.com/in/eshonqul-abdulazizov-947230244/'
-                  target='_blank'
-                  className='linkedin'
-                  rel='noreferrer'
-                >
-                  <i className='bi bi-linkedin'></i>
-                </a>
-                <a href='#' className='google-plus'>
-                  <i className='bi bi-skype'></i>
-                </a>
+        <Grid.Row gutter={[24, 24]}>
+          <Grid.Col xs={24} md={12} lg={12}>
+            <div className={cls.infoBox}>
+              <div className={cls.infoBoxicon}>
+                <Icons.Location />
+              </div>
+              <div>
+                <h3>My Address</h3>
+                <p className='text-dark'>Tahkent Uzbekistan</p>
               </div>
             </div>
-          </div>
+          </Grid.Col>
 
-          <div className='col-md-6 mt-4 d-flex align-items-stretch'>
-            <div className='info-box'>
-              <i className='fas fa-envelope'></i>
-              <h3 className='text-dark'>Email Me</h3>
-              <p className='text-dark'>abdulazizoveshonqul66@gmail.com</p>
-            </div>
-          </div>
-          <div className='col-md-6 mt-4 d-flex align-items-stretch'>
-            <div className='info-box'>
-              <i className='fas fa-phone'></i>
-              <h3 className='text-dark'>Call Me</h3>
-              <p className='text-dark'>+998 97 167 47 48</p>
-            </div>
-          </div>
-        </div>
+          <Grid.Col xs={24} md={12} lg={12}>
+            <div className={cls.infoBox}>
+              <div className={cls.infoBoxicon}>
+                <Icons.Share />
+              </div>
 
-        <form action='forms/contact.php' method='post' role='form' className='php-email-form mt-4'>
-          <div className='row'>
-            <div className='col-md-6 form-group'>
-              <input
-                type='text'
-                name='name'
-                className='form-control'
-                id='name'
-                placeholder='Your Name'
-                required
-              />
+              <div>
+                <h3 className='text-dark'>Social Profiles</h3>
+                <div className='social-links'>
+                  <a href='https://www.twitter.com/eshonqul74' target='_blank' rel='noreferrer'>
+                    <i className='bi bi-twitter'></i>
+                  </a>
+                  <a href='https://www.facebook.com/Eshonqul' target='_blank' rel='noreferrer'>
+                    <i className='bi bi-facebook'></i>
+                  </a>
+                  <a
+                    href='https://www.instagram.com/maxmadalivich_'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <i className='bi bi-instagram'></i>
+                  </a>
+                  <a
+                    href='https://www.linkedin.com/in/eshonqul-abdulazizov-947230244/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <i className='bi bi-linkedin'></i>
+                  </a>
+                  <a href='#' className='google-plus'>
+                    <i className='bi bi-skype'></i>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className='col-md-6 form-group mt-3 mt-md-0'>
-              <input
-                type='email'
-                className='form-control'
-                name='email'
-                id='email'
-                placeholder='Your Email'
-                required
-              />
+          </Grid.Col>
+
+          <Grid.Col xs={24} md={12} lg={12}>
+            <div className={cls.infoBox}>
+              <div className={cls.infoBoxicon}>
+                <Icons.Location />
+              </div>
+              <div>
+                <h3 className='text-dark'>Email Me</h3>
+                <p className='text-dark'>abdulazizoveshonqul66@gmail.com</p>
+              </div>
             </div>
-          </div>
-          <div className='form-group mt-3'>
-            <input
+          </Grid.Col>
+
+          <Grid.Col xs={24} md={12} lg={12}>
+            <div className={cls.infoBox}>
+              <div className={cls.infoBoxicon}>
+                <Icons.Location />
+              </div>
+              <div>
+                <h3 className='text-dark'>Call Me</h3>
+                <p className='text-dark'>+998 97 167 47 48</p>
+              </div>
+            </div>
+          </Grid.Col>
+        </Grid.Row>
+
+        <Grid.Row gutter={[24, 24]}>
+          <Grid.Col xs={12}>
+            <Input
               type='text'
-              className='form-control'
-              name='subject'
-              id='subject'
-              placeholder='Subject'
-              required
+              label='last_name'
+              placeholder='Your Name'
+              value={formik.values.name}
+              name='name'
+              onChange={(e: any) => setInputValue('name', e)}
+              state={formik.errors.name && 'error'}
+              message={formik.errors.name}
             />
-          </div>
-          <div className='form-group mt-3'>
-            <textarea
-              className='form-control'
+          </Grid.Col>
+
+          <Grid.Col xs={12}>
+            <Input
+              type='email'
+              label='email'
+              placeholder='Your email'
+              value={formik.values.email}
+              name='email'
+              onChange={(e: any) => setInputValue('email', e)}
+              state={formik.errors.email && 'error'}
+              message={formik.errors.email}
+            />
+          </Grid.Col>
+
+          <Grid.Col xs={24}>
+            <Input
+              type='text'
+              label='subject'
+              placeholder='Your subject'
+              value={formik.values.subject}
+              name='subject'
+              onChange={(e: any) => setInputValue('subject', e)}
+              state={formik.errors.subject && 'error'}
+              message={formik.errors.subject}
+            />
+          </Grid.Col>
+
+          <Grid.Col xs={24}>
+            <Textarea
               name='message'
               placeholder='Message'
-              required
-            ></textarea>
-          </div>
-          <div className='text-center d-flex justify-content-center'>
-            <Button htmlType='submit' title='submit' variant='blue' />
-          </div>
-        </form>
+              value={formik.values.message}
+              onChange={(e: any) => setInputValue('message', e)}
+              state={formik.errors.subject && 'default'}
+              message={formik.errors.subject}
+            />
+          </Grid.Col>
+        </Grid.Row>
+        <div className='text-center d-flex justify-content-center mt-3'>
+          <Button onClick={formik.handleSubmit} htmlType='submit' title='submit' variant='blue' />
+        </div>
       </div>
     </section>
   );

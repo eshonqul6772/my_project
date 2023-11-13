@@ -1,0 +1,21 @@
+.infoBox {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+  height: 120px;
+  padding: 20px;
+  background: rgba(164, 42, 42, 0.08);
+  color: black;
+
+  &icon{
+    padding: 12px;
+    background: rgba(203, 95, 95, 0.1);
+    border-radius: 50%;
+  }
+
+  h3{
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 24px;
+    font-weight: bold;
+  }
+}

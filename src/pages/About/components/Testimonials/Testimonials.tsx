@@ -22,6 +22,27 @@ const Testimonials: React.FC = () => {
           slidesPerView={3}
           className='mySwiper'
           loop={true}
+          breakpoints={{
+            1024: {
+              slidesPerView: 3,
+            },
+
+            992: {
+              slidesPerView: 1,
+            },
+
+            768: {
+              slidesPerView: 1,
+            },
+
+            576: {
+              slidesPerView: 1,
+            },
+
+            280: {
+              slidesPerView: 1,
+            },
+          }}
         >
           <SwiperSlide>
             <div className='swiper-slide'>

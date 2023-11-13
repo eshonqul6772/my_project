@@ -14,7 +14,7 @@ const Services: React.FC = () => {
         </div>
 
         <Grid.Row gutter={[24, 24]}>
-          <Grid.Col xs={8}>
+          <Grid.Col xs={24} md={12} lg={8}>
             <div className='icon-box'>
               <div className='icon'>
                 <i className='bx bxl-dribbble'></i>
@@ -26,7 +26,7 @@ const Services: React.FC = () => {
             </div>
           </Grid.Col>
 
-          <Grid.Col xs={8}>
+          <Grid.Col xs={24} md={12} lg={8}>
             <div className='icon-box'>
               <div className='icon'>
                 <i className='bx bx-file'></i>
@@ -38,7 +38,7 @@ const Services: React.FC = () => {
             </div>
           </Grid.Col>
 
-          <Grid.Col xs={8}>
+          <Grid.Col xs={24} md={12} lg={8}>
             <div className='icon-box'>
               <div className='icon'>
                 <i className='bx bx-tachometer'></i>
@@ -50,7 +50,7 @@ const Services: React.FC = () => {
             </div>
           </Grid.Col>
 
-          <Grid.Col xs={8}>
+          <Grid.Col xs={24} md={12} lg={8}>
             <div className='icon-box'>
               <div className='icon'>
                 <i className='bx bx-world'></i>
@@ -62,7 +62,7 @@ const Services: React.FC = () => {
             </div>
           </Grid.Col>
 
-          <Grid.Col xs={8}>
+          <Grid.Col xs={24} md={12} lg={8}>
             <div className='icon-box'>
               <div className='icon'>
                 <i className='bx bx-slideshow'></i>
@@ -74,7 +74,7 @@ const Services: React.FC = () => {
             </div>
           </Grid.Col>
 
-          <Grid.Col xs={8}>
+          <Grid.Col xs={24} md={12} lg={8}>
             <div className='icon-box'>
               <div className='icon'>
                 <i className='bx bx-arch'></i>

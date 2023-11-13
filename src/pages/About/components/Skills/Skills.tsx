@@ -12,7 +12,7 @@ const Skills: React.FC = () => {
       </div>
 
       <Grid.Row gutter={[24, 24]}>
-        <Grid.Col xs={12}>
+        <Grid.Col xs={24} md={12} xl={12}>
           <div className='progress'>
             <span className='skill'>
               HTML <i className='val'>100%</i>
@@ -41,7 +41,7 @@ const Skills: React.FC = () => {
           </div>
         </Grid.Col>
 
-        <Grid.Col xs={12}>
+        <Grid.Col xs={24} md={12} xl={12}>
           <div className='progress'>
             <span className='skill'>
               React js<i className='val'>70%</i>

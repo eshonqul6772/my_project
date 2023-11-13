@@ -1,0 +1,48 @@
+.input {
+  height: 50px;
+  padding: 15px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--content-primary);
+  border: 1px solid var(--content-primary);
+  border-radius: var(--radius-5);
+
+
+  &--focused, &:hover, &:active {
+    border-color: var(--content-primary);
+    outline-color: #003681;
+  }
+
+  &--state {
+    &-default {
+      border-color: var(--border-primary);
+    }
+
+    &-success {
+      border-color: var(--border-green);
+    }
+
+    &-error {
+      border-color: var(--border-red);
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &-label{
+    color: black;
+    margin-bottom: 10px;
+
+    &:after{
+      content: '*';
+      color: red;
+    }
+  }
+}
+
+.message {
+  color: var(--content-red);
+}

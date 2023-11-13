@@ -8,7 +8,7 @@ const Counts: React.FC = () => {
   return (
     <div className='counts container'>
       <Grid.Row gutter={[24, 24]}>
-        <Grid.Col xs={6}>
+        <Grid.Col xs={24} md={12} xl={6}>
           <div className='count-box'>
             <i className='bi bi-emoji-smile'></i>
             <span
@@ -21,7 +21,7 @@ const Counts: React.FC = () => {
           </div>
         </Grid.Col>
 
-        <Grid.Col xs={6}>
+        <Grid.Col xs={24} md={12} xl={6}>
           <div className='count-box'>
             <i className='bi bi-journal-richtext'></i>
             <span
@@ -34,7 +34,7 @@ const Counts: React.FC = () => {
           </div>
         </Grid.Col>
 
-        <Grid.Col xs={6}>
+        <Grid.Col xs={24} md={12} xl={6}>
           <div className='count-box'>
             <i className='bi bi-headset'></i>
             <span
@@ -47,7 +47,7 @@ const Counts: React.FC = () => {
           </div>
         </Grid.Col>
 
-        <Grid.Col xs={6}>
+        <Grid.Col xs={24} md={12} xl={6}>
           <div className='count-box'>
             <i className='bi bi-award'></i>
             <span

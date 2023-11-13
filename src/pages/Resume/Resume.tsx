@@ -14,7 +14,7 @@ const Resume: React.FC = () => {
         </div>
 
         <Grid.Row gutter={[24, 24]}>
-          <Grid.Col xs={12}>
+          <Grid.Col xs={24} md={12} xl={12}>
             <h3 className='resume-title'>Sumary</h3>
             <div className='resume-item pb-0'>
               <h4 className='text-dark'>Alice Barkley</h4>
@@ -60,7 +60,7 @@ const Resume: React.FC = () => {
             </div>
           </Grid.Col>
 
-          <Grid.Col xs={12}>
+          <Grid.Col xs={24} md={12} xl={12}>
             <h3 className='resume-title'>Professional Experience</h3>
             <div className='resume-item'>
               <h4>Senior graphic design specialist</h4>

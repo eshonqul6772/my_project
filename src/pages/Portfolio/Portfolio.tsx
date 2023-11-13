@@ -30,7 +30,7 @@ const Portfolio: React.FC = () => {
 
         <Grid.Row gutter={[24, 24]}>
           {arr.map(index => (
-            <Grid.Col key={index} xs={8}>
+            <Grid.Col xs={24} md={12} lg={8} key={index}>
               <Card
                 imgUrl={'hello'}
                 link={'hello'}

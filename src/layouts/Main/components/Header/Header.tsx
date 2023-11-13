@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
 
 import Logo from 'assets/images/logo.png';
 
 import './Header.scss';
 
 const Header: React.FC = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
   const routes = [
     { title: 'About', path: '#about' },
     { title: 'Resume', path: '#resume' },
@@ -29,7 +32,7 @@ const Header: React.FC = () => {
           </a>
 
           <nav id='navbar'>
-            <ul className='d-flex gap-3 list-unstyled m-0'>
+            <ul className={`menu-nav${navbarOpen ? ' show-menu' : ' menu'}`}>
               {routes.map(({ title, path }) => (
                 <li key={path}>
                   <a className='nav-link' href={path}>
@@ -43,6 +46,10 @@ const Header: React.FC = () => {
           <a className='header__connect' href='tel:998971674748'>
             Connect me
           </a>
+
+          <button className='toggle text-dark' onClick={() => setNavbarOpen(prev => !prev)}>
+            {navbarOpen ? <CloseOutlined color='black' /> : <MenuOutlined color='black' />}
+          </button>
         </div>
       </div>
     </header>
