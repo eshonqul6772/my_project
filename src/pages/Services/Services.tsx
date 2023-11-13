@@ -2,12 +2,14 @@ import React from 'react';
 
 import * as Grid from 'components/Grid';
 
+import Container from 'components/Container';
+
 import './Services.scss';
 
 const Services: React.FC = () => {
   return (
     <section id='services' className='services'>
-      <div className='container'>
+      <Container>
         <div className='section-title'>
           <h2>Services</h2>
           <p>My Services</p>
@@ -86,7 +88,7 @@ const Services: React.FC = () => {
             </div>
           </Grid.Col>
         </Grid.Row>
-      </div>
+      </Container>
     </section>
   );
 };

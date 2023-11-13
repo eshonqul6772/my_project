@@ -2,13 +2,14 @@ import React from 'react';
 
 import * as Grid from 'components/Grid';
 
-import * as Icons from 'assets/Icons';
+import * as Icons from 'components/Icons';
+import Container from 'components/Container';
 
 import './Interests.scss';
 
 const Interests: React.FC = () => {
   return (
-    <div className='interests container'>
+    <Container>
       <div className='section-title'>
         <h2>Interests</h2>
       </div>
@@ -87,7 +88,7 @@ const Interests: React.FC = () => {
           </div>
         </Grid.Col>
       </Grid.Row>
-    </div>
+    </Container>
   );
 };
 

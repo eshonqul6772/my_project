@@ -1,11 +1,14 @@
 .services {
 
   .icon-box {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding: 80px 20px;
     transition: all ease-in-out 0.3s;
     box-shadow: 0 0 1px 1px var(--content-primary);
     border-radius: var(--radius-5);
+    background-color: white;
 
     &:hover {
       background: var(--background-primary);
@@ -38,6 +41,7 @@
       line-height: 24px;
       font-size: 14px;
       margin-bottom: 0;
+      color: black;
     }
 
     .icon {

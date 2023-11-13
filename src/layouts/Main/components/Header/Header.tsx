@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
 
+import Container from 'components/Container';
+
 import Logo from 'assets/images/logo.png';
 
 import './Header.scss';
@@ -18,24 +20,29 @@ const Header: React.FC = () => {
 
   return (
     <header className='py-3 header'>
-      <div className='container'>
+      <Container>
         <div className='d-flex justify-content-between align-items-center'>
           <a className='d-flex align-items-center gap-2 fw-bold text-dark' href='#'>
             <img
-              style={{ borderRadius: '50%', border: '2px solid #ffbb2c' }}
+              style={{
+                width: '50px',
+                height: '50px',
+                borderRadius: '50%',
+                border: '2px solid #ffbb2c',
+              }}
               src={Logo}
-              width='50'
-              height='50px'
               alt=''
             />
-            Abdulazizov <br /> Eshonqul
+            <span className='d-none d-md-flex'>
+              Abdulazizov <br /> Eshonqul
+            </span>
           </a>
 
           <nav id='navbar'>
             <ul className={`menu-nav${navbarOpen ? ' show-menu' : ' menu'}`}>
               {routes.map(({ title, path }) => (
                 <li key={path}>
-                  <a className='nav-link' href={path}>
+                  <a onClick={() => setNavbarOpen(prev => !prev)} className='nav-link' href={path}>
                     {title}
                   </a>
                 </li>
@@ -48,10 +55,10 @@ const Header: React.FC = () => {
           </a>
 
           <button className='toggle text-dark' onClick={() => setNavbarOpen(prev => !prev)}>
-            {navbarOpen ? <CloseOutlined color='black' /> : <MenuOutlined color='black' />}
+            {navbarOpen ? <CloseOutlined /> : <MenuOutlined />}
           </button>
         </div>
-      </div>
+      </Container>
     </header>
   );
 };

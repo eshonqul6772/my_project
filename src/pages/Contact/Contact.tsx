@@ -3,8 +3,10 @@ import axios from 'axios';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
-import * as Icons from 'assets/Icons';
+import * as Icons from 'components/Icons';
 import * as Grid from 'components/Grid';
+
+import Container from 'components/Container';
 
 import Button from 'components/Button';
 import Input from 'components/Input';
@@ -72,8 +74,8 @@ const Contact: React.FC = () => {
   );
 
   return (
-    <section id='contact' className='contact'>
-      <div className='container'>
+    <section id='contact' className='pb-3'>
+      <Container>
         <div className='section-title'>
           <h2 className='te xt-dark'>Contact</h2>
           <p className='text-dark'>Contact Me</p>
@@ -204,11 +206,19 @@ const Contact: React.FC = () => {
               message={formik.errors.subject}
             />
           </Grid.Col>
+
+          <Grid.Col xs={24}>
+            <div className='text-center d-flex justify-content-center mt-3 pb-3'>
+              <Button
+                onClick={formik.handleSubmit}
+                htmlType='submit'
+                title='submit'
+                variant='blue'
+              />
+            </div>
+          </Grid.Col>
         </Grid.Row>
-        <div className='text-center d-flex justify-content-center mt-3'>
-          <Button onClick={formik.handleSubmit} htmlType='submit' title='submit' variant='blue' />
-        </div>
-      </div>
+      </Container>
     </section>
   );
 };

@@ -4,6 +4,7 @@ export { default as Calendar } from './Calendar';
 export { default as Paint } from './Paint';
 export { default as Database } from './Database';
 export { default as Gradient } from './Gradient';
+export { default as Github } from './Github';
 export { default as FileList } from './FileList';
 export { default as Price } from './Price';
 export { default as Anchor } from './anchor';

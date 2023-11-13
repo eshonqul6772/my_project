@@ -1,7 +1,7 @@
 import React from 'react';
 import ModalBase, { ModalProps } from 'antd/lib/modal';
 
-import * as Icons from 'assets/Icons';
+import * as Icons from 'components/Icons';
 
 import './Modal.scss';
 import cls from './Modal.module.scss';

@@ -2,15 +2,7 @@ import React from 'react';
 
 import './Card.scss';
 
-interface ICard {
-  imgUrl: string;
-  title: string;
-  paragraph: string;
-  link: string;
-  linkData: string;
-}
-
-const Card: React.FC<ICard> = ({ imgUrl, title, paragraph, link, linkData }) => {
+const Card: React.FC = () => {
   return (
     <div className=' portfolio-item filter-web'>
       <div className='portfolio-wrap'>
@@ -32,7 +24,7 @@ const Card: React.FC<ICard> = ({ imgUrl, title, paragraph, link, linkData }) => 
               <i className='bx bx-plus'></i>
             </a>
             <a
-              href='portfolio-details.html'
+              href='#'
               data-gallery='portfolioDetailsGallery'
               data-glightbox='type: external'
               className='portfolio-details-lightbox'
