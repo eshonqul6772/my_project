@@ -1,4 +1,5 @@
 import React from 'react';
+import { Progress } from 'antd';
 
 import * as Grid from 'components/Grid';
 
@@ -16,59 +17,35 @@ const Skills: React.FC = () => {
       <Grid.Row gutter={[24, 24]}>
         <Grid.Col xs={24} md={12} xl={12}>
           <div className='progress'>
-            <span className='skill'>
-              HTML <i className='val'>100%</i>
-            </span>
-            <div className='progress-bar-wrap'>
-              <div className='progress-bar'></div>
-            </div>
+            <span className='skill'>HTML</span>
+            <Progress strokeLinecap='butt' percent={80} />
           </div>
 
           <div className='progress'>
-            <span className='skill'>
-              CSS <i className='val'>70%</i>
-            </span>
-            <div className='progress-bar-wrap'>
-              <div className='progress-bar'></div>
-            </div>
+            <span className='skill'>CSS</span>
+            <Progress strokeLinecap='butt' percent={70} />
           </div>
 
           <div className='progress'>
-            <span className='skill'>
-              JavaScript <i className='val'>70%</i>
-            </span>
-            <div className='progress-bar-wrap'>
-              <div className='progress-bar'></div>
-            </div>
+            <span className='skill'>JavaScript</span>
+            <Progress strokeLinecap='butt' percent={70} />
           </div>
         </Grid.Col>
 
         <Grid.Col xs={24} md={12} xl={12}>
           <div className='progress'>
-            <span className='skill'>
-              React js<i className='val'>70%</i>
-            </span>
-            <div className='progress-bar-wrap'>
-              <div className='progress-bar'></div>
-            </div>
+            <span className='skill'>React js</span>
+            <Progress strokeLinecap='butt' percent={70} />
           </div>
 
           <div className='progress'>
-            <span className='skill'>
-              Tilwind css <i className='val'>60%</i>
-            </span>
-            <div className='progress-bar-wrap'>
-              <div className='progress-bar'></div>
-            </div>
+            <span className='skill'>Tilwind css</span>
+            <Progress strokeLinecap='butt' percent={60} />
           </div>
 
           <div className='progress'>
-            <span className='skill'>
-              sass/scss <i className='val'>70%</i>
-            </span>
-            <div className='progress-bar-wrap'>
-              <div className='progress-bar'></div>
-            </div>
+            <span className='skill'>sass/scss</span>
+            <Progress strokeLinecap='butt' percent={70} />
           </div>
         </Grid.Col>
       </Grid.Row>

@@ -9,13 +9,14 @@
 .portfolio #portfolio-flters li {
   cursor: pointer;
   display: inline-block;
+  margin: 0 3px 10px 3px;
   padding: 8px 16px 10px 16px;
+  color: var(--content-white);
+  background-color: var(--background-blue);
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #fff;
-  margin: 0 3px 10px 3px;
   transition: all 0.3s ease-in-out;
   border-radius: 4px;
 }

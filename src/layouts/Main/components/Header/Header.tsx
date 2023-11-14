@@ -33,9 +33,6 @@ const Header: React.FC = () => {
               src={Logo}
               alt=''
             />
-            <span className='d-none d-md-flex'>
-              Abdulazizov <br /> Eshonqul
-            </span>
           </a>
 
           <nav id='navbar'>

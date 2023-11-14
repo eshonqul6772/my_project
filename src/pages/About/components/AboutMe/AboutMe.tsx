@@ -17,7 +17,7 @@ const AboutMe: React.FC = () => {
 
         <div className='row'>
           <div className='col-lg-4' data-aos='fade-right'>
-            <img src={meImg} className='img-fluid' alt='' />
+            <img src='https://picsum.photos/440/440?image=0' className='img-fluid' alt='' />
           </div>
           <div className='col-lg-8 pt-4 pt-lg-0 content' data-aos='fade-left'>
             <h3>React js deweloper</h3>
@@ -66,7 +66,7 @@ const AboutMe: React.FC = () => {
                 </ul>
               </div>
             </div>
-            <p className='text-dark'>
+            <p className='text-dark fs-5  '>
               Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt
               adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
               Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia

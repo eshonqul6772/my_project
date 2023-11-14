@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
         chat_id: chatId,
         text: data,
       });
-
+      alert('sucess sen massegs');
       console.log('Message sent successfully!');
     } catch (error) {
       console.error('Error sending message:', error);
@@ -83,48 +83,60 @@ const Contact: React.FC = () => {
 
         <Grid.Row gutter={[24, 24]}>
           <Grid.Col xs={24} md={12} lg={12}>
-            <div className={cls.infoBox}>
+            <div data-aos='fade-up' data-aos-duration='1000' className={cls.infoBox}>
               <div className={cls.infoBoxicon}>
                 <Icons.Location />
               </div>
               <div>
                 <h3>My Address</h3>
-                <p className='text-dark'>Tahkent Uzbekistan</p>
+                <p className={cls.infoBoxparagrft}>Tahkent Uzbekistan</p>
               </div>
             </div>
           </Grid.Col>
 
           <Grid.Col xs={24} md={12} lg={12}>
-            <div className={cls.infoBox}>
+            <div data-aos='fade-up' data-aos-duration='1000' className={cls.infoBox}>
               <div className={cls.infoBoxicon}>
                 <Icons.Share />
               </div>
 
               <div>
                 <h3 className='text-dark'>Social Profiles</h3>
-                <div className='social-links'>
-                  <a href='https://www.twitter.com/eshonqul74' target='_blank' rel='noreferrer'>
-                    <i className='bi bi-twitter'></i>
-                  </a>
-                  <a href='https://www.facebook.com/Eshonqul' target='_blank' rel='noreferrer'>
-                    <i className='bi bi-facebook'></i>
+                <div className={cls.socialLinks}>
+                  <a
+                    className={cls.link}
+                    href='https://www.twitter.com/eshonqul74'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <i className='bi bi-twitter '></i>
                   </a>
                   <a
+                    className={cls.link}
+                    href='https://www.facebook.com/Eshonqul'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <i className='bi bi-facebook '></i>
+                  </a>
+                  <a
+                    className={cls.link}
                     href='https://www.instagram.com/maxmadalivich_'
                     target='_blank'
                     rel='noreferrer'
                   >
-                    <i className='bi bi-instagram'></i>
+                    <i className='bi bi-instagram '></i>
                   </a>
                   <a
+                    className={cls.link}
                     href='https://www.linkedin.com/in/eshonqul-abdulazizov-947230244/'
                     target='_blank'
                     rel='noreferrer'
                   >
-                    <i className='bi bi-linkedin'></i>
+                    <i className='bi bi-linkedin '></i>
                   </a>
-                  <a href='#' className='google-plus'>
-                    <i className='bi bi-skype'></i>
+                  <a className={cls.link} href='#'>
+                    <i className='bi bi-skype '></i>
                   </a>
                 </div>
               </div>
@@ -132,25 +144,25 @@ const Contact: React.FC = () => {
           </Grid.Col>
 
           <Grid.Col xs={24} md={12} lg={12}>
-            <div className={cls.infoBox}>
+            <div data-aos='fade-up' data-aos-duration='1000' className={cls.infoBox}>
               <div className={cls.infoBoxicon}>
                 <Icons.Location />
               </div>
               <div>
                 <h3 className='text-dark'>Email Me</h3>
-                <p className='text-dark'>abdulazizoveshonqul66@gmail.com</p>
+                <p className={cls.infoBoxparagrft}>abdulazizoveshonqul66@gmail.com</p>
               </div>
             </div>
           </Grid.Col>
 
           <Grid.Col xs={24} md={12} lg={12}>
-            <div className={cls.infoBox}>
+            <div data-aos='fade-up' data-aos-duration='1000' className={cls.infoBox}>
               <div className={cls.infoBoxicon}>
                 <Icons.Location />
               </div>
               <div>
                 <h3 className='text-dark'>Call Me</h3>
-                <p className='text-dark'>+998 97 167 47 48</p>
+                <p className={cls.infoBoxparagrft}>+998 97 167 47 48</p>
               </div>
             </div>
           </Grid.Col>

@@ -38,7 +38,7 @@ const Resume: React.FC = () => {
 
             <h3 className='resume-title'>Education</h3>
             <div className='resume-item'>
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
+              <h4>I studied in Najot Talim &amp; Graphic Design</h4>
               <h5>2015 - 2016</h5>
               <p>
                 <em>Rochester Institute of Technology, Rochester, NY</em>

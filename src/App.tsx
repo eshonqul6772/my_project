@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import * as Layout from './layouts';
 
@@ -9,6 +12,11 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <Layout.Main>
       <About />
