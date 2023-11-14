@@ -1,9 +1,9 @@
 import React from 'react';
 import { Progress } from 'antd';
 
-import * as Grid from 'components/Grid';
+import * as Grid from '@/components/Grid';
 
-import Container from 'components/Container';
+import Container from '@/components/Container';
 
 import './Skills.scss';
 

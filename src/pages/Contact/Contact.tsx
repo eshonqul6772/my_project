@@ -3,14 +3,14 @@ import axios from 'axios';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
-import * as Icons from 'components/Icons';
-import * as Grid from 'components/Grid';
+import * as Icons from '@/components/Icons';
+import * as Grid from '@/components/Grid';
 
-import Container from 'components/Container';
+import Container from '@/components/Container';
 
-import Button from 'components/Button';
-import Input from 'components/Input';
-import Textarea from 'components/Textarea';
+import Button from '@/components/Button';
+import Input from '@/components/Input';
+import Textarea from '@/components/Textarea';
 
 import cls from './Contact.module.scss';
 

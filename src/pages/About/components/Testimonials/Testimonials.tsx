@@ -6,8 +6,8 @@ import 'swiper/css/pagination';
 
 import './Testimonials.scss';
 
-import meImg from 'assets/images/me.jpg';
-import Container from '../../../../components/Container';
+import meImg from '@/assets/images/me.jpg';
+import Container from '@/components/Container';
 
 const Testimonials: React.FC = () => {
   return (

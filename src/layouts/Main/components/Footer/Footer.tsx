@@ -1,10 +1,10 @@
 import React from 'react';
 
-import * as Icons from 'components/Icons';
+import * as Icons from '@/components/Icons';
 
-import Container from 'components/Container';
+import Container from '@/components/Container';
 
-import Logo from 'assets/images/logo.png';
+import Logo from '@/assets/images/logo.png';
 
 import cls from './Footer.module.scss';
 

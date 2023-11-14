@@ -1,8 +1,6 @@
 import React from 'react';
 
-import Container from 'components/Container';
-
-import meImg from 'assets/images/me.jpg';
+import Container from '@/components/Container';
 
 import './AboutMe.scss';
 

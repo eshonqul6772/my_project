@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
 
-import Container from 'components/Container';
+import Container from '@/components/Container';
 
-import Logo from 'assets/images/logo.png';
+import Logo from '@/assets/images/logo.png';
 
 import './Header.scss';
 

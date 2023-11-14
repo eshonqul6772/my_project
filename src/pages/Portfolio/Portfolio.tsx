@@ -1,8 +1,8 @@
 import React from 'react';
 
-import * as Grid from 'components/Grid';
+import * as Grid from '@/components/Grid';
 
-import Container from 'components/Container';
+import Container from '@/components/Container';
 import Card from './components/Card';
 
 import './Portfolio.scss';

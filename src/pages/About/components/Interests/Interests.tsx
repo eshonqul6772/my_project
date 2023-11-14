@@ -1,9 +1,9 @@
 import React from 'react';
 
-import * as Grid from 'components/Grid';
-import * as Icons from 'components/Icons';
+import * as Grid from '@/components/Grid';
+import * as Icons from '@/components/Icons';
 
-import Container from 'components/Container';
+import Container from '@/components/Container';
 
 import Card from './components/Card';
 
