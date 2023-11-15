@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
+import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
 
 import Container from '@/components/Container';
 
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
             </ul>
           </nav>
 
-          <a className='header__connect' href='tel:998971674748'>
+          <a className='header__connect d-none d-lg-flex' href='tel:998971674748'>
             Connect me
           </a>
 

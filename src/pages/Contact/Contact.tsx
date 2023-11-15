@@ -46,7 +46,6 @@ const Contact: React.FC = () => {
         chat_id: chatId,
         text: data,
       });
-      alert('sucess sen massegs');
       console.log('Message sent successfully!');
     } catch (error) {
       console.error('Error sending message:', error);
