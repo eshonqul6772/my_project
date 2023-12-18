@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import cx from 'classnames'
+import React, { useState } from 'react';
+import cx from 'classnames';
 
-import classes from './Input.module.scss'
+import classes from './Input.module.scss';
 
 interface IInput {
   value?: string;
@@ -23,7 +23,6 @@ const Input: React.FC<IInput> = ({
   label = '',
   value = '',
   className = '',
-  defaultValue = '',
   id = '',
   name = '',
   type = 'text',
@@ -33,11 +32,11 @@ const Input: React.FC<IInput> = ({
   onChange,
   onBlur,
 }) => {
-  const [isFocused, setFocused] = useState(false)
+  const [isFocused, setFocused] = useState(false);
 
   return (
     <>
-      <div style={{display:'flex', flexDirection:'column'}}>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
         <label className={cx(classes['input-label'])}>{label}</label>
         <input
           className={cx(
@@ -46,12 +45,12 @@ const Input: React.FC<IInput> = ({
             state && classes[`input--state-${state}`],
             isFocused && classes['input--focused'],
           )}
-          {...{ value, type, id, name, placeholder, defaultValue }}
-          onChange={(e) => onChange && onChange(e.target.value)}
+          {...{ value, type, id, name, placeholder }}
+          onChange={e => onChange && onChange(e.target.value)}
           onFocus={() => setFocused(true)}
-          onBlur={(e) => {
-            setFocused(false)
-            onBlur && onBlur(e.target.value)
+          onBlur={e => {
+            setFocused(false);
+            onBlur && onBlur(e.target.value);
           }}
           autoComplete='off'
         />
@@ -59,7 +58,7 @@ const Input: React.FC<IInput> = ({
 
       {!!message && <div className={classes.message}>{message}</div>}
     </>
-  )
-}
+  );
+};
 
-export default Input
+export default Input;

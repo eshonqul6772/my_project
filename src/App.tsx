@@ -10,8 +10,17 @@ import Services from './pages/Services/';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 
-function App() {
+const App = () => {
+  function log(text: string, color: string, fontSize: string): void {
+    if (fontSize) {
+      console.log(`%c${text}`, `color: ${color}; font-size: ${fontSize}`);
+    } else {
+      console.log(`%c${text}`, `color: ${color}`);
+    }
+  }
+
   useEffect(() => {
+    log('My Portfolio', 'red', '32px');
     AOS.init();
     AOS.refresh();
   }, []);
@@ -25,6 +34,6 @@ function App() {
       <Contact />
     </Layout.Main>
   );
-}
+};
 
 export default App;

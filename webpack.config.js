@@ -4,7 +4,8 @@ const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('css-minimizer-webpack-plugin');
+const { sentryWebpackPlugin } = require('@sentry/webpack-plugin');
 
 module.exports = env => {
   dotenv.config({
@@ -12,6 +13,7 @@ module.exports = env => {
   });
 
   return {
+    devtool: 'source-map',
     mode: 'development',
     entry: './src/index.tsx',
     output: {
@@ -90,6 +92,11 @@ module.exports = env => {
       }),
       new OptimizeCssAssetsPlugin(),
       new CleanWebpackPlugin(),
+      sentryWebpackPlugin({
+        org: 'eshonqul',
+        project: 'test',
+        authToken: process.env.SENTRY_AUTH_TOKEN,
+      }),
     ],
     optimization: {
       minimize: true,

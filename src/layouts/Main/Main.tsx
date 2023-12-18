@@ -12,9 +12,7 @@ interface IProps {
 const Main: React.FC<IProps> = ({ children }) => (
   <div className={cls.wrapper}>
     <Header />
-
     <main className={cls.main}>{children}</main>
-
     <Footer />
   </div>
 );
