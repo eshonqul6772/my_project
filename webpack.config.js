@@ -93,7 +93,7 @@ module.exports = env => {
       new OptimizeCssAssetsPlugin(),
       new CleanWebpackPlugin(),
       sentryWebpackPlugin({
-        org: 'eshonqul',
+        org: 'developer',
         project: 'test',
         authToken: process.env.SENTRY_AUTH_TOKEN,
       }),

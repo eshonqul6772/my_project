@@ -6,13 +6,13 @@ import Container from '@/components/Container';
 
 import Logo from '@/assets/images/logo.png';
 
-import cls from './Footer.module.scss';
+import './Footer.scss';
 
 const Footer: React.FC = () => {
   return (
-    <footer className='footer py-4 bg-white mt-3'>
+    <footer className='footer '>
       <Container>
-        <div className='d-flex align-items-center justify-content-between'>
+        <div className='footer__wrapper'>
           <div>
             <img
               style={{
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
             />
           </div>
 
-          <ul className={cls.sicel}>
+          <ul className='sicel'>
             <li>
               <a href=''>
                 <Icons.Github />

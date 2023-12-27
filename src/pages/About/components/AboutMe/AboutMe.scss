@@ -1,7 +1,29 @@
+.about-title{
+ color: var(--content-green);
+ font-size: 26px;
+ font-weight: 700;
+}
+
+.about-paragrft{
+ color: var(--content-black);
+ font-family: sans-serif;
+}
+
+
+.about-me{
+
+ strong{
+  margin-right: 10px;
+  color: var(--content-black);
+  font-weight: bold;
+  font-size:20px;
+ }
+}
+
  .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #18d26e;
+  color: var(--content-green);
 }
 
  .content ul {
@@ -13,7 +35,7 @@
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  color: black;
+  color: var(--content-black);
 }
 
  .content ul strong {
@@ -21,18 +43,24 @@
   font-size: 20px;
 }
 
- .content ul span {
-  font-size: 20px;
- }
-
- .content ul i {
-  font-size: 20px;
-  margin-right: 5px;
-  color: var(--content-red);
-  font-weight: bold;
-  line-height: 0;
-}
-
  .content p:last-child {
   margin-bottom: 0;
 }
+
+ .about__information-list{
+  padding:0;
+  list-style: none;
+
+  li{
+   padding-bottom: 10px;
+
+   span{
+    color: var(--content-black);
+    font-size: 20px;
+   }
+  }
+ }
+
+ .description{
+  color: black;
+ }

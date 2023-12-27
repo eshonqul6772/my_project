@@ -11,17 +11,17 @@ const Header: React.FC = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const routes = [
-    { title: 'About', path: '#about' },
-    { title: 'Resume', path: '#resume' },
-    { title: 'Services', path: '#services' },
-    { title: 'Portfolio', path: '#portfolio' },
-    { title: 'Contact', path: '#contact' },
+    { title: 'About', path: '/about' },
+    { title: 'Resume', path: '/resume' },
+    { title: 'Services', path: '/services' },
+    { title: 'Portfolio', path: '/portfolio' },
+    { title: 'Contact', path: '/contact' },
   ];
 
   return (
-    <header className='py-3 header'>
+    <header className='header'>
       <Container>
-        <div className='d-flex justify-content-between align-items-center'>
+        <div className='header__info'>
           <a className='d-flex align-items-center gap-2 fw-bold text-dark' href='#'>
             <img
               style={{
@@ -47,11 +47,15 @@ const Header: React.FC = () => {
             </ul>
           </nav>
 
-          <a className='header__connect d-none d-lg-flex' href='tel:998971674748'>
+          <a
+            style={{ display: 'none' }}
+            className='header__connect d-none d-lg-flex'
+            href='tel:998971674748'
+          >
             Connect me
           </a>
 
-          <button className='toggle text-dark' onClick={() => setNavbarOpen(prev => !prev)}>
+          <button className='toggle' onClick={() => setNavbarOpen(prev => !prev)}>
             {navbarOpen ? <CloseOutlined /> : <MenuOutlined />}
           </button>
         </div>

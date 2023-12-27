@@ -4,7 +4,7 @@ import './Card.scss';
 
 const Card: React.FC = () => {
   return (
-    <div data-aos='fade-up' data-aos-duration='2000' className=' portfolio-item filter-web'>
+    <div data-aos='fade-up' data-aos-duration='2000' className='portfolio-item filter-web'>
       <div className='portfolio-wrap'>
         <img
           src='https://upload.wikimedia.org/wikipedia/commons/4/49/A_black_image.jpg'

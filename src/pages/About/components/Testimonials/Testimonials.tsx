@@ -13,7 +13,7 @@ const Testimonials: React.FC = () => {
   return (
     <>
       <Container>
-        <div className='pt-3'>
+        <div className='wrapper'>
           <div className='section-title'>
             <h2>TESTIMONIALS</h2>
           </div>

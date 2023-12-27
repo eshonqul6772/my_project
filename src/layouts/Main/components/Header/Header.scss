@@ -4,9 +4,16 @@
   left: 0;
   top: 0;
   right: 0;
+  padding: 15px 0;
   background: white;
   box-shadow: 0 0 1px 2px var(--background-blue);
   z-index: 1000000;
+
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__connect{
     padding: 4px 15px;
@@ -47,7 +54,7 @@
 
 .toggle{
   display: none;
-  color: white;
+  color: black;
   font-size: 25px;
 }
 

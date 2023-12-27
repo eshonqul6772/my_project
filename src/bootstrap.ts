@@ -1,13 +1,33 @@
-import config from './config';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import '@/assets/styles/main.scss';
 
-import { init } from './services/i18n/i18n';
+import store from '@/store';
+import config from '@/config';
+import { i18n, http, storage } from '@/services';
 
-init({
+i18n.init({
   languages: config.language.list,
-  currentLanguage: localStorage.getItem(config.language.key),
+  currentLanguage: storage.local.get(config.language.key),
   initialLanguage: config.language.initial,
   backend: {
-    loadPath: `${process.env.REACT_APP_API_URL}/references/translations/CLIENT_CABINET/{{lng}}`,
+    loadPath: `${config.api.baseUrl}/reference/translations/{{lng}}/CLIENT`,
   },
-  onChange: (language: string) => localStorage.setItem('language', language),
+  onChange: language => storage.local.set('language', language),
+});
+
+http.init({
+  configFn: () => {
+    const state = store.getState();
+    // @ts-ignore
+    const token = state.auth.token;
+
+    return {
+      baseURL: config.api.baseUrl,
+      headers: {
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
+    };
+  },
 });

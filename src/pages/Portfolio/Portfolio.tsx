@@ -13,7 +13,7 @@ const Portfolio: React.FC = () => {
   return (
     <section id='portfolio' className='portfolio'>
       <Container>
-        <div className='pt-3'>
+        <div className='portfolio__wrapper'>
           <div className='section-title'>
             <h2>Portfolio</h2>
             <p>My Works</p>

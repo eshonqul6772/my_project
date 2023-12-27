@@ -1,7 +1,13 @@
 .footer{
   margin-top:15px;
   padding: 15px 0;
-  background-color: var(--background-white)
+  background-color: var(--background-white);
+
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .sicel{
   display: flex;
