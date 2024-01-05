@@ -1,7 +1,6 @@
-import React, {createContext} from 'react';
+import React, { createContext } from 'react';
 
-// @ts-ignore
-const Context = createContext();
+const Context = createContext({});
 
 interface IProps {
   children: React.ReactNode;

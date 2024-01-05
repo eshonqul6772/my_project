@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
+
+import 'react-toggle/style.css'
 
 import Container from '@/components/Container';
 
@@ -22,7 +25,7 @@ const Header: React.FC = () => {
     <header className='header'>
       <Container>
         <div className='header__info'>
-          <a className='d-flex align-items-center gap-2 fw-bold text-dark' href='#'>
+          <Link to='/'>
             <img
               style={{
                 width: '50px',
@@ -33,15 +36,19 @@ const Header: React.FC = () => {
               src={Logo}
               alt=''
             />
-          </a>
+          </Link>
 
           <nav id='navbar'>
             <ul className={`menu-nav${navbarOpen ? ' show-menu' : ' menu'}`}>
               {routes.map(({ title, path }) => (
                 <li key={path}>
-                  <a onClick={() => setNavbarOpen(prev => !prev)} className='nav-link' href={path}>
+                  <NavLink
+                    onClick={() => setNavbarOpen(prev => !prev)}
+                    className='nav-link'
+                    to={path}
+                  >
                     {title}
-                  </a>
+                  </NavLink>
                 </li>
               ))}
             </ul>

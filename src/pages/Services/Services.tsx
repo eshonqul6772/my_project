@@ -10,9 +10,9 @@ const Services: React.FC = () => {
   const arr = [1, 2, 3, 4, 5, 6];
 
   return (
-    <section id='services' className='services'>
+    <section id='services' className='services' data-aos='fade-up' data-aos-duration='1000'>
       <Container>
-        <div className='section-title'>
+        <div style={{ paddingTop: '15px' }} className='section-title'>
           <h2>Services</h2>
           <p>My Services</p>
         </div>

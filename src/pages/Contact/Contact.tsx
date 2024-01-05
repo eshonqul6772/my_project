@@ -2,6 +2,9 @@ import React, { useCallback } from 'react';
 import axios from 'axios';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { FaTwitter, FaFacebookF } from 'react-icons/fa6';
+import { FaInstagram, FaLinkedin,FaSkype  } from 'react-icons/fa';
+
 
 import * as Icons from '@/components/Icons';
 import * as Grid from '@/components/Grid';
@@ -75,7 +78,7 @@ const Contact: React.FC = () => {
   return (
     <section id='contact' className='pb-3'>
       <Container>
-        <div className='section-title'>
+        <div style={{paddingTop: '15px'}} className='section-title'>
           <h2 className='te xt-dark'>Contact</h2>
           <p className='text-dark'>Contact Me</p>
         </div>
@@ -108,7 +111,7 @@ const Contact: React.FC = () => {
                     target='_blank'
                     rel='noreferrer'
                   >
-                    <i className='bi bi-twitter '></i>
+                    <FaTwitter/>
                   </a>
                   <a
                     className={cls.link}
@@ -116,7 +119,7 @@ const Contact: React.FC = () => {
                     target='_blank'
                     rel='noreferrer'
                   >
-                    <i className='bi bi-facebook '></i>
+                    <FaFacebookF/>
                   </a>
                   <a
                     className={cls.link}
@@ -124,7 +127,7 @@ const Contact: React.FC = () => {
                     target='_blank'
                     rel='noreferrer'
                   >
-                    <i className='bi bi-instagram '></i>
+                    <FaInstagram/>
                   </a>
                   <a
                     className={cls.link}
@@ -132,10 +135,10 @@ const Contact: React.FC = () => {
                     target='_blank'
                     rel='noreferrer'
                   >
-                    <i className='bi bi-linkedin '></i>
+                    <FaLinkedin/>
                   </a>
                   <a className={cls.link} href='#'>
-                    <i className='bi bi-skype '></i>
+                    <FaSkype/>
                   </a>
                 </div>
               </div>
@@ -219,7 +222,7 @@ const Contact: React.FC = () => {
           </Grid.Col>
 
           <Grid.Col xs={24}>
-            <div className='text-center d-flex justify-content-center mt-3 pb-3'>
+            <div className={cls.submitBtn}>
               <Button
                 onClick={formik.handleSubmit}
                 htmlType='submit'

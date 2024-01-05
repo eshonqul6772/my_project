@@ -6,11 +6,7 @@ const Card: React.FC = () => {
   return (
     <div data-aos='fade-up' data-aos-duration='2000' className='portfolio-item filter-web'>
       <div className='portfolio-wrap'>
-        <img
-          src='https://upload.wikimedia.org/wikipedia/commons/4/49/A_black_image.jpg'
-          className='img-fluid'
-          alt=''
-        />
+        <img src='https://upload.wikimedia.org/wikipedia/commons/4/49/A_black_image.jpg' alt='' />
         <div className='portfolio-info'>
           <h4>Web 3</h4>
           <p>Web</p>
@@ -36,23 +32,6 @@ const Card: React.FC = () => {
         </div>
       </div>
     </div>
-    // <div className='col-lg-4 col-md-6 portfolio-item filter-app'>
-    //   <div className='portfolio-wrap'>
-    //     <img src={imgUrl} className='img-fluid' alt='' />
-    //     <div className='portfolio-info'>
-    //       <h4>{title}</h4>
-    //       <p>{paragraph}</p>
-    //       <div className='portfolio-links'>
-    //         <a href={link} className='portfolio-lightbox' title='App 1'>
-    //           <i className='bx bx-plus'></i>
-    //         </a>
-    //         <a href={linkData} className='portfolio-details-lightbox' title='Portfolio Details'>
-    //           <i className='bx bx-link'></i>
-    //         </a>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

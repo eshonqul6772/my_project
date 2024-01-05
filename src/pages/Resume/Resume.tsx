@@ -8,7 +8,7 @@ import './Resume.scss';
 
 const Resume: React.FC = () => {
   return (
-    <section id='resume' className='resume'>
+    <section id='resume' className='resume' data-aos='fade-up' data-aos-duration='1000'>
       <Container>
         <div className='section-title'>
           <h2>Resume</h2>
@@ -17,7 +17,7 @@ const Resume: React.FC = () => {
 
         <Grid.Row gutter={[24, 24]}>
           <Grid.Col xs={24} md={12} xl={12}>
-            <h3 className='resume-title'>Sumary</h3>
+            <h3 className='resume-title'>Summary</h3>
             <div className='resume-item pb-0'>
               <h4 className='text-dark'>Alice Barkley</h4>
               <p className='text-dark'>
@@ -36,8 +36,8 @@ const Resume: React.FC = () => {
 
             <h3 className='resume-title'>Education</h3>
             <div className='resume-item'>
-              <h4>I studied in Najot Talim &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
+              <h4>I studied in Najot Talim &amp; Frontend Developer</h4>
+              <h5>2022 - 2023</h5>
               <p>
                 <em>Rochester Institute of Technology, Rochester, NY</em>
               </p>

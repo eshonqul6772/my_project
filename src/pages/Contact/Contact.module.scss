@@ -17,6 +17,10 @@
     opacity: 0.7;
   }
 
+  .section-title{
+    padding-top: 15px;
+  }
+
 
   &icon{
     padding: 12px;
@@ -25,6 +29,7 @@
   }
 
   h3{
+    margin: 0;
     color: rgba(0, 0, 0, 0.8);
     font-size: 24px;
     font-weight: bold;
@@ -34,10 +39,15 @@
 .socialLinks  {
   display: flex;
   gap: 10px;
+  margin: 14px 0;
 }
 
 .link{
-  padding: 5px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
   background-color: var(--background-blue);
   border: 1px solid transparent;
   color: var(--content-white);
@@ -48,4 +58,10 @@
     color: var(--content-blue);
     border-color: var(--content-blue);
   }
+}
+
+.submitBtn{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
 }

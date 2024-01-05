@@ -11,7 +11,7 @@ const Portfolio: React.FC = () => {
   const arr = [0, 1, 2, 4, 5, 6, 7, 8, 9];
 
   return (
-    <section id='portfolio' className='portfolio'>
+    <section id='portfolio' className='portfolio' data-aos='fade-up' data-aos-duration='1000'>
       <Container>
         <div className='portfolio__wrapper'>
           <div className='section-title'>

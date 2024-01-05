@@ -15,11 +15,11 @@ const AboutMe: React.FC = () => {
         </div>
 
         <Grid.Row gutter={[24, 24]}>
-          <Grid.Col xs={8} data-aos='fade-right'>
+          <Grid.Col xs={8}>
             <img src='https://picsum.photos/440/440?image=0' className='img-fluid' alt='' />
           </Grid.Col>
 
-          <Grid.Col xs={16} data-aos='fade-left'>
+          <Grid.Col xs={16}>
             <h3 className='about-title'>React js deweloper</h3>
             <i className='about-paragrft'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
